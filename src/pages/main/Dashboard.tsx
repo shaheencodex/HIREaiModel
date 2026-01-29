@@ -1,5 +1,5 @@
-import { useState, useEffect } from 'react';
-import HireAISkeleton from '../../components/HireAISkeleton';
+import { useState, useEffect } from "react";
+import HireAISkeleton from "../../components/HireAISkeleton";
 
 export default function Dashboard() {
   const [loading, setLoading] = useState(true);
@@ -17,25 +17,55 @@ export default function Dashboard() {
     <div className="p-6">
       {/* Stats Overview */}
       <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-6">
-        <div className="bg-white rounded-lg shadow p-6">
-          <h3 className="text-gray-500 text-sm mb-2 " style={{ fontFamily: 'monorope, sans-serif' }}>Total Interviews</h3>
-          <p className="text-2xl font-semibold text-[#125756]" style={{ fontFamily: 'Nohemi, sans-serif' }}>24</p>
+        <div className="bg-gray-100 rounded-lg shadow p-6">
+          <h3
+            className="text-gray-500 text-sm mb-2 "
+            style={{ fontFamily: "monorope, sans-serif" }}
+          >
+            Total Interviews
+          </h3>
+          <p
+            className="text-2xl font-semibold text-[#11435c]"
+            style={{ fontFamily: "Nohemi, sans-serif" }}
+          >
+            24
+          </p>
           <div className="mt-2 text-sm text-green-600">
             <span>↑ 12% this week</span>
           </div>
         </div>
 
-        <div className="bg-white rounded-lg shadow p-6">
-          <h3 className="text-gray-500 text-sm mb-2" style={{ fontFamily: 'monorope, sans-serif' }}>Job Descriptions</h3>
-          <p className="text-2xl font-semibold text-[#125756]"style={{ fontFamily: 'Nohemi, sans-serif' }}>15</p>
+        <div className="bg-gray-100 rounded-lg shadow p-6">
+          <h3
+            className="text-gray-500 text-sm mb-2"
+            style={{ fontFamily: "monorope, sans-serif" }}
+          >
+            Job Descriptions
+          </h3>
+          <p
+            className="text-2xl font-semibold text-[#11435c]"
+            style={{ fontFamily: "Nohemi, sans-serif" }}
+          >
+            15
+          </p>
           <div className="mt-2 text-sm text-green-600">
             <span>↑ 8% this week</span>
           </div>
         </div>
 
-        <div className="bg-white rounded-lg shadow p-6">
-          <h3 className="text-gray-500 text-sm mb-2" style={{ fontFamily: 'monorope, sans-serif' }}>Resume Matches</h3>
-          <p className="text-2xl font-semibold text-[#125756]"style={{ fontFamily: 'Nohemi, sans-serif' }}>85%</p>
+        <div className="bg-gray-100 rounded-lg shadow p-6">
+          <h3
+            className="text-gray-500 text-sm mb-2"
+            style={{ fontFamily: "monorope, sans-serif" }}
+          >
+            Resume Matches
+          </h3>
+          <p
+            className="text-2xl font-semibold text-[#11435c]"
+            style={{ fontFamily: "Nohemi, sans-serif" }}
+          >
+            85%
+          </p>
           <div className="mt-2 text-sm text-green-600">
             <span>↑ 5% this week</span>
           </div>
@@ -44,7 +74,7 @@ export default function Dashboard() {
 
       {/* Recent Activity */}
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-        <div className="bg-white rounded-lg shadow p-6">
+        <div className="bg-gray-100 rounded-lg shadow-lg p-6">
           <h2 className="text-lg font-semibold mb-4">Recent Interviews</h2>
           <div className="space-y-4">
             <div className="border-b pb-3">
@@ -76,7 +106,7 @@ export default function Dashboard() {
           </div>
         </div>
 
-        <div className="bg-white rounded-lg shadow p-6">
+        <div className="bg-gray-100 rounded-lg shadow-lg p-6">
           <h2 className="text-lg font-semibold mb-4">
             Recent Job Descriptions
           </h2>

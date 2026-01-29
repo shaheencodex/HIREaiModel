@@ -1,18 +1,18 @@
-import { NavLink, useLocation } from 'react-router-dom';
+import { NavLink, useLocation } from "react-router-dom";
 
-import logo from '../assets/images/logo.svg';
-import dashboardicon from '../assets/images/dashboard.svg';
-import calendaricon from '../assets/images/calendar.svg';
-import jdgeneratoricon from '../assets/images/GenerateJD.svg';
-import resumeicon from '../assets/images/ResumeMatch.svg';
-import aiinterviewicon from '../assets/images/AI-Interview.svg';
-import summaryicon from '../assets/images/summary.svg';
-import usericon from '../assets/images/user-group.svg';
-import subscriptionicon from '../assets/images/managesubscriptions.svg';
-import helpicon from '../assets/images/help-circle.svg';
-import logouticon from '../assets/images/logout.svg';
-import chevronicon from '../assets/images/collapse_13726.png'; 
-import closelogo from '../assets/images/closedlogo.svg';
+import logo from "../assets/images/AMZLogo.png";
+import dashboardicon from "../assets/images/dashboard.svg";
+import calendaricon from "../assets/images/calendar.svg";
+import jdgeneratoricon from "../assets/images/GenerateJD.svg";
+import resumeicon from "../assets/images/ResumeMatch.svg";
+import aiinterviewicon from "../assets/images/AI-Interview.svg";
+import summaryicon from "../assets/images/summary.svg";
+import usericon from "../assets/images/user-group.svg";
+import subscriptionicon from "../assets/images/managesubscriptions.svg";
+import helpicon from "../assets/images/help-circle.svg";
+import logouticon from "../assets/images/logout.svg";
+import chevronicon from "../assets/images/collapse_13726.png";
+import closelogo from "../assets/images/closedlogo.svg";
 
 interface SidebarProps {
   isOpen?: boolean;
@@ -22,40 +22,50 @@ interface SidebarProps {
 export default function Sidebar({ isOpen, toggleSidebar }: SidebarProps) {
   const location = useLocation();
   const menuItems = [
-    { name: 'Dashboard', icon: dashboardicon, path: '/dashboard', badge: '9' },
-    { name: 'Calendar', icon: calendaricon, path: '/dashboard/calendar' },
-    { name: 'Job Description', icon: jdgeneratoricon, path: '/dashboard/jd-generator' },
-    { name: 'Resume Match', icon: resumeicon, path: '/dashboard/resume-match' },
-    { name: 'AI Interview', icon: aiinterviewicon, path: '/dashboard/ai-interview' },
-    { name: 'Summary', icon: summaryicon, path: '/dashboard/summary' },
+    { name: "Dashboard", icon: dashboardicon, path: "/dashboard", badge: "9" },
+    { name: "Calendar", icon: calendaricon, path: "/dashboard/calendar" },
+    {
+      name: "Job Description",
+      icon: jdgeneratoricon,
+      path: "/dashboard/jd-generator",
+    },
+    { name: "Resume Match", icon: resumeicon, path: "/dashboard/resume-match" },
+    {
+      name: "AI Interview",
+      icon: aiinterviewicon,
+      path: "/dashboard/ai-interview",
+    },
+    { name: "Summary", icon: summaryicon, path: "/dashboard/summary" },
   ];
 
   const accountItems = [
-    { name: 'User Management', icon: usericon, path: '/dashboard/user-management' },
     {
-      name: 'Manage Subscription',
-      icon: subscriptionicon,
-      path: '/dashboard/subscription',
+      name: "User Management",
+      icon: usericon,
+      path: "/dashboard/user-management",
     },
-    { name: 'Help & Support', icon: helpicon, path: '/dashboard/help' },
-    { name: 'Logout', icon: logouticon, path: '/logout', isLogout: true },
+    {
+      name: "Manage Subscription",
+      icon: subscriptionicon,
+      path: "/dashboard/subscription",
+    },
+    { name: "Help & Support", icon: helpicon, path: "/dashboard/help" },
+    { name: "Logout", icon: logouticon, path: "/logout", isLogout: true },
   ];
-
-
 
   return (
     <div
       className={`${
-        isOpen ? 'w-64' : 'w-20'
-      } h-screen bg-white shadow-lg flex flex-col transition-all duration-300 font-[Manrope]`}
+        isOpen ? "w-64" : "w-20"
+      } h-screen bg-white shadow-xl flex flex-col transition-all duration-300 font-[Manrope]`}
     >
       {/* Logo Section */}
       <div className="px-6 py-5 flex justify-center">
         <img
-          src= {isOpen ? logo : closelogo} 
+          src={isOpen ? logo : closelogo}
           alt="Logo"
           className={`transition-all duration-300 ${
-            isOpen ? 'h-20 w-40' : 'h-8 w-8'
+            isOpen ? "h-auto w-80" : "h-8 w-8 "
           }`}
         />
       </div>
@@ -64,7 +74,7 @@ export default function Sidebar({ isOpen, toggleSidebar }: SidebarProps) {
       <div className="flex flex-col grow overflow-y-auto">
         {isOpen && (
           <div className="px-6 pt-2">
-            <h2 className="text-gray-500 text-sm font-medium mb-2">Menu</h2>
+            <h2 className="text-gray-800 text-sm font-bold mb-2">Menu</h2>
           </div>
         )}
 
@@ -76,13 +86,13 @@ export default function Sidebar({ isOpen, toggleSidebar }: SidebarProps) {
                 key={item.name}
                 to={item.path}
                 className={`flex items-center ${
-                  isOpen ? 'justify-between' : 'justify-center'
+                  isOpen ? "justify-between" : "justify-center"
                 } px-2 py-3 mb-2 text-sm font-medium rounded-lg transition-all duration-200 ${
                   isActive
-                    ? 'bg-[#125756] text-white'
-                    : 'text-gray-700 hover:bg-[#125756]/10 hover:text-[#125756]'
+                    ? "bg-[#00824b] text-white"
+                    : "text-gray-900 hover:bg-[#00824b]/10 hover:text-[#00824b]"
                 }`}
-                style={{ fontFamily: 'Manrope, sans-serif' }}
+                style={{ fontFamily: "Manrope, sans-serif" }}
               >
                 <div className="flex items-center">
                   <img
@@ -90,14 +100,14 @@ export default function Sidebar({ isOpen, toggleSidebar }: SidebarProps) {
                     alt={`${item.name} icon`}
                     className={`w-5 h-5 transition-all duration-200 ${
                       isActive
-                        ? 'filter brightness-0 invert'
-                        : 'filter brightness-0'
+                        ? "filter brightness-0 invert"
+                        : "filter brightness-0 invert-1"
                     }`}
                   />
                   {isOpen && <span className="ml-3">{item.name}</span>}
                 </div>
                 {isOpen && item.badge && (
-                  <span className="bg-white text-[#125756] text-xs font-semibold px-2 py-0.5 rounded-full">
+                  <span className="bg-white text-[#00824b] text-xs font-semibold px-2 py-0.5 rounded-full">
                     {item.badge}
                   </span>
                 )}
@@ -109,7 +119,7 @@ export default function Sidebar({ isOpen, toggleSidebar }: SidebarProps) {
         {/* Account Section */}
         {isOpen && (
           <div className="px-6 pt-6">
-            <h2 className="text-gray-500 text-sm font-medium mb-2">Account</h2>
+            <h2 className="text-gray-800 text-sm font-bold mb-2">Account</h2>
           </div>
         )}
 
@@ -121,13 +131,13 @@ export default function Sidebar({ isOpen, toggleSidebar }: SidebarProps) {
                 key={item.name}
                 to={item.path}
                 className={`flex items-center ${
-                  isOpen ? 'justify-between' : 'justify-center'
+                  isOpen ? "justify-between" : "justify-center"
                 } px-2 py-3 mb-2 text-sm font-medium rounded-lg transition-all duration-200 ${
                   isActive
-                    ? 'bg-[#125756] text-white'
-                    : 'text-gray-700 hover:bg-[#125756]/10 hover:text-[#125756]'
+                    ? "bg-[#00824b] text-white"
+                    : "text-gray-900 hover:bg-[#00824b]/10 hover:text-[#00824b]"
                 }`}
-                style={{ fontFamily: 'Manrope, sans-serif' }}
+                style={{ fontFamily: "Manrope, sans-serif" }}
               >
                 <div className="flex items-center">
                   <img
@@ -135,8 +145,8 @@ export default function Sidebar({ isOpen, toggleSidebar }: SidebarProps) {
                     alt={`${item.name} icon`}
                     className={`w-5 h-5 transition-all duration-200 ${
                       isActive
-                        ? 'filter brightness-0 invert'
-                        : 'filter brightness-0'
+                        ? "filter brightness-0 invert"
+                        : "filter brightness-0 invert-1"
                     }`}
                   />
                   {isOpen && <span className="ml-3">{item.name}</span>}
@@ -157,7 +167,7 @@ export default function Sidebar({ isOpen, toggleSidebar }: SidebarProps) {
             src={chevronicon}
             alt="Collapse"
             className={`w-5 h-5 transform transition-transform duration-300 ${
-              isOpen ? 'rotate-270' : 'rotate-90'
+              isOpen ? "rotate-270" : "rotate-90"
             }`}
           />
         </button>
