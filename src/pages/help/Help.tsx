@@ -41,11 +41,11 @@ const Help: React.FC = () => {
             Frequently Asked Questions
           </h2>
           <div className="space-y-4">
-            <details className="border rounded-lg">
-              <summary className="px-4 py-3 cursor-pointer hover:bg-gray-50">
+            <details className="border border-gray-400 rounded-lg">
+              <summary className="px-4 py-3 cursor-pointer hover:bg-gray-50 rounded-lg">
                 How do I create a new job description?
               </summary>
-              <div className="px-4 py-3 border-t">
+              <div className="px-4 py-3 border-t border-gray-400 rounded-lg">
                 <p className="text-gray-700">
                   Navigate to the Job Description Generator tab, enter the job
                   role and requirements, then click the "Generate" button. Our
@@ -55,11 +55,11 @@ const Help: React.FC = () => {
               </div>
             </details>
 
-            <details className="border rounded-lg">
-              <summary className="px-4 py-3 cursor-pointer hover:bg-gray-50">
+            <details className="border border-gray-400 rounded-lg">
+              <summary className="px-4 py-3 cursor-pointer hover:bg-gray-50 rounded-lg">
                 How does the AI Interview process work?
               </summary>
-              <div className="px-4 py-3 border-t">
+              <div className="px-4 py-3 border-t border-gray-400 rounded-lg">
                 <p className="text-gray-700">
                   The AI Interview feature conducts automated initial screening
                   interviews. Select the interview type, enter candidate
@@ -69,11 +69,11 @@ const Help: React.FC = () => {
               </div>
             </details>
 
-            <details className="border rounded-lg">
-              <summary className="px-4 py-3 cursor-pointer hover:bg-gray-50">
+            <details className="border border-gray-400 rounded-lg">
+              <summary className="px-4 py-3 cursor-pointer hover:bg-gray-50 rounded-lg">
                 How can I manage my subscription?
               </summary>
-              <div className="px-4 py-3 border-t">
+              <div className="px-4 py-3 border-t border-gray-400 rounded-lg">
                 <p className="text-gray-700">
                   Go to the Manage Subscription tab to view your current plan,
                   upgrade, or modify your subscription. You can also view

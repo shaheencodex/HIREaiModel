@@ -11,10 +11,10 @@ const AIInterview: React.FC = () => {
               Interview Type
             </label>
             <div className="mt-2 grid grid-cols-2 gap-4">
-              <button className="p-4 border-2 border-blue-950 rounded-lg text-blue-950  hover:bg-[#00824b]/10">
+              <button className="p-4 border-2 border-blue-950 rounded-lg text-blue-950 bg-white hover:bg-[#00824b]/10">
                 Technical Interview
               </button>
-              <button className="p-4 border-2 border-blue-950 rounded-lg text-blue-950 hover:bg-[#00824b]/10">
+              <button className="p-4 border-2 border-blue-950 rounded-lg text-blue-950 bg-white hover:bg-[#00824b]/10">
                 HR Interview
               </button>
             </div>

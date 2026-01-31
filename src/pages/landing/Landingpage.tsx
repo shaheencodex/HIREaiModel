@@ -187,7 +187,7 @@ export default function LandingPage() {
 
         <h3
           style={{
-            marginTop: 56,
+            marginTop: 50,
             color: "#111827",
             fontFamily: "Nohemi",
             fontWeight: 500,

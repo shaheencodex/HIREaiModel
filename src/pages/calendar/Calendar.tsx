@@ -34,7 +34,7 @@ const Calendar: React.FC = () => {
         title,
         start: arg.date,
         end: new Date(arg.date.getTime() + 60 * 60 * 1000), // 1 hour duration
-        backgroundColor: "#125756",
+        backgroundColor: "#00824b",
       };
       setEvents([...events, newEvent]);
     }
@@ -58,7 +58,7 @@ const Calendar: React.FC = () => {
                 title,
                 start: new Date(),
                 end: new Date(new Date().getTime() + 60 * 60 * 1000),
-                backgroundColor: "#125756",
+                backgroundColor: "#00824b",
               };
               setEvents([...events, newEvent]);
             }

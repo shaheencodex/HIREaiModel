@@ -68,11 +68,11 @@
   font-weight: 700;
   font-family: "Nohemi";
   margin: 0 0 12px;
-  color: #111827;
+  color: #11435c;
 }
 .hero .subtitle {
-  color: #6b7280;
-  font-size: 15px;
+  color: #626b7e;
+  font-size: 16px;
   line-height: 1.5;
   font-family: "Nohemi";
   font-weight: 300;
@@ -90,11 +90,11 @@
   padding-right: 24px;
   width: 100%;
   max-width: 460px;
-  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.08);
-  border: 1px solid #eaeef4;
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.12);
 }
 .card.card-login {
   padding-left: 32px;
+  background-color: white;
 }
 .card-header {
   margin-bottom: 12px;
@@ -102,13 +102,14 @@
 .card-title {
   font-size: 24px;
   font-family: "Nohemi", "Poppins", sans-serif;
+  font-weight: 400;
   /* font-weight: 500; */
-  color: #111827;
+  color: #11435c;
   margin: 0 0 4px;
 }
 .card-subtitle {
   font-size: 14px;
-  color: #6b7280;
+  color: #154e6b;
   font-family: "Manrope";
   font-weight: 500;
   padding-top: 20px;
@@ -140,6 +141,8 @@
   height: 18px;
   pointer-events: none;
   opacity: 0.85;
+  filter: invert(20%) sepia(60%) saturate(500%) hue-rotate(160deg)
+    brightness(90%) contrast(90%);
 }
 /* Remove placeholder circle when a real icon is present */
 .field.with-icon.email::before {
@@ -151,10 +154,14 @@
 .field.with-icon.password-icon::before {
   content: none;
 }
+.mail-icon {
+  filter: invert(20%) sepia(60%) saturate(500%) hue-rotate(160deg)
+    brightness(90%) contrast(90%);
+}
 .label {
   font-size: 13px;
   font-weight: 500;
-  color: #111827;
+  color: #11435c;
 }
 .input {
   height: 48px;
@@ -170,10 +177,11 @@
   width: 100%;
   display: block;
   box-sizing: border-box; /* prevent overflow from padding */
+  color: #11435c;
 }
 .input:focus {
-  border-color: #125759;
-  box-shadow: 0 1px 0 0 #125759;
+  border-color: #11435c;
+  box-shadow: 0 1px 0 0 #11435c;
 }
 .password {
   position: relative;
@@ -323,7 +331,7 @@
   grid-template-columns: 1fr auto 1fr;
   align-items: center;
   gap: 12px;
-  color: #9ca3af;
+  color: #154e6b;
   font-size: 12px;
   margin: 20px 0;
 }
@@ -338,7 +346,7 @@
 /* --- Muted Link --- */
 .muted {
   text-align: center;
-  color: #6b7280;
+  color: #11435c;
   font-size: 13px;
   font-family: "Manrope", "Poppins", sans-serif;
   margin-top: 12px;

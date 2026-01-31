@@ -32,7 +32,7 @@ export default function Features() {
   return (
     <section style={{ width: "100%", marginTop: 28 }}>
       <div
-        className="features-grid"
+        className="features-grid "
         style={{
           maxWidth: 1100,
           margin: "0 auto",

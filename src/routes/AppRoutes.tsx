@@ -51,14 +51,16 @@ export default function AppRoutes() {
         <Route path="/" element={<LandingPage />} />
         <Route path="/landingpage" element={<LandingPage />} />
 
-        <Route
+        {/* <Route
           path="/login"
           element={!isLoggedIn ? <Login /> : <Navigate to="/dashboard" />}
         />
         <Route
           path="/signup"
           element={!isLoggedIn ? <Register /> : <Navigate to="/dashboard" />}
-        />
+        /> */}
+        <Route path="/login" element={<Login />} />
+        <Route path="/signup" element={<Register />} />
         <Route path="/verify-email-sent" element={<VerifyEmailSent />} />
         <Route path="/auth-action" element={<EmailAction />} />
         <Route path="/forgot-password" element={<ForgotPassword />} />
@@ -124,18 +126,18 @@ function DashboardLayout() {
       </div>
 
       {/* Main content */}
-      <div className="flex-1 flex flex-col min-w-0 overflow-hidden bg-white">
-        <header className="flex items-center justify-between px-4 md:px-10 py-4 sticky top-0 z-30 bg-white ">
+      <div className="flex-1 flex flex-col min-w-0 overflow-hidden bg-[#11435c]">
+        <header className="flex items-center justify-between px-4 md:px-10 py-4 sticky top-0 z-30 bg-[#11435c] ">
           <div className="flex items-center">
             <button
               onClick={toggleSidebar}
-              className="mr-4 p-2 rounded-lg hover:bg-gray-200"
+              className="mr-4 p-2 rounded-lg text-white hover:bg-gray-200 hover:text-black"
               aria-label="Toggle menu"
             >
               ☰
             </button>
             <h1
-              className="text-xl text-[#222222]"
+              className="text-xl text-[#FFFFFF]"
               style={{ fontFamily: "Nohemi, sans-serif" }}
             >
               Welcome back, Karthik
@@ -143,7 +145,7 @@ function DashboardLayout() {
           </div>
 
           <div className="flex items-center">
-            <div className="w-10 h-10 rounded-full bg-[#00824b] text-white font-bold flex items-center justify-center shadow-md">
+            <div className="w-10 h-10 rounded-full bg-white text-[#11435c] font-bold flex items-center justify-center shadow-md">
               K
             </div>
           </div>
